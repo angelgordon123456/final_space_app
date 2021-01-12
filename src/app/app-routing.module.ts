@@ -11,6 +11,30 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'character/:id',
+    loadChildren: () => import('./api/character/character.module').then( m => m.CharacterPageModule)
+  },
+  {
+    path: 'locations',
+    loadChildren: () => import('./locations/locations.module').then( m => m.LocationsPageModule)
+  },
+  {
+    path: 'episodes',
+    loadChildren: () => import('./episodes/episodes.module').then( m => m.EpisodesPageModule)
+  },
+  {
+    path: 'location/:id',
+    loadChildren: () => import('./api/location/location.module').then( m => m.LocationPageModule)
+  },
+  {
+    path: 'episode/:id',
+    loadChildren: () => import('./api/episode/episode.module').then( m => m.EpisodePageModule)
+  },
+  {
+    path: 'cita',
+    loadChildren: () => import('./cita/cita.module').then( m => m.CitaPageModule)
+  },
 ];
 
 @NgModule({

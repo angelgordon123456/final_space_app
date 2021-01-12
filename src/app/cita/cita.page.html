@@ -1,23 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      FINAL SPACE
+      CITA
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">  
-    <ion-list *ngFor="let character of characters">
-        <ion-item (click)="goCharacter(character.id)">
+    <ion-list *ngFor="let cita of citas">
+        <ion-item >
           <ion-avatar slot="start">
-            <img [src]="character.img_url">
+            <img [src]="cita.image">
           </ion-avatar>
           <ion-label>
-            <h2>{{ character.name }}</h2>
-            <h3>{{ character.species }}</h3>
-            <p>{{ character.origin }}</p>
+            <h2>{{ cita.quote }}</h2>
+            <h3>{{ cita.by }}</h3>
+           
           </ion-label>
         </ion-item>
     </ion-list>
+
+   
+
 </ion-content>
 

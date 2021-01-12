@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>locations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let location of locations">
+    <ion-item (click)="goLocation(location.id)">
+      <ion-avatar slot="start">
+        <img [src]="location.img_url">
+      </ion-avatar>
+      <ion-label>
+        <h2> {{ location.name }}</h2>
+        <h3> {{ location.type}} </h3>
+        <p> {{ location.dimension }} </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  
+
+
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>episodes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let episode of episodes">
+    <ion-item (click)="goEpisode(episode.id)">
+      <ion-avatar slot="start">
+        <img [src]="episode.img_url">
+      </ion-avatar>
+      <ion-label>
+        <h2> {{ episode.name }}</h2>
+        <h3>  {{ episode.type }} </h3>
+        <p>  {{ episode.episode }} </p>
+        <p>  {{ episode.director }} </p>
+        <p>  {{ episode.writer }} </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

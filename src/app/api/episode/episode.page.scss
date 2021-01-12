@@ -1,0 +1,11 @@
+.spinner{
+    display: flex;
+    justify-content: center;
+align-items: center;
+height: 100vh;
+}
+ion-progress-bar{
+width: 25%;
+height: 25%;
+color: rgb(252, 4, 4);
+}
